@@ -105,6 +105,7 @@ body {
 .auth{
     margin-left: auto;
 }
+
 .auth-item{
     margin-right: 50px;
 }
@@ -126,11 +127,7 @@ body {
 .auth-link:last-child{
     margin-right: 0;
 }
-.email-icon,
-.phone-icon{
-    fill: currentColor;
-    margin-right: 10px;
-}
+
  
 .menu-link {
     text-decoration: var(--accent-color);
@@ -140,6 +137,12 @@ body {
 .menu-link:last-child{
    margin-right: 0;
 }
+
+.phone-icon, 
+.email-icon{
+  fill: currentColor;
+}
+
 
 .menu-link:hover,
 .menu-link:focus,
@@ -153,9 +156,8 @@ body {
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), 
-                rgba(47, 48, 58, 0.4)), 
-                url("/images/img.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/img.jpg");
+    
     border: 1px solid #ECECEC;
     background-position: 50% 50%;
     background-repeat:no-repeat; 
