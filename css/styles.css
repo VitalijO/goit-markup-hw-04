@@ -564,22 +564,25 @@ body {
 .client-link{
     display: flex; 
     justify-content:center;
+     padding: 16px 32px;
     width: 170px;
     height: 92px;
+    color: #AFB1B8;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
 }
 
 .icon{ 
-    fill: #afb1b8;
+    fill:currentColor;
+}
+
+.client-link:hover{
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+   
 }
 
 
-.icon:hover{
-   fill: var(--accent-color);
-   border:1px solid var(--accent-color);
-
-}
 
 
 /* -------------------------------------------Footer------------------------------------------------------------------------*/
