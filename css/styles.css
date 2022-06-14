@@ -157,7 +157,7 @@ body {
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img.jpg");
-    
+    background-size: cover;
     border: 1px solid #ECECEC;
     background-position: 50% 50%;
     background-repeat:no-repeat; 
@@ -246,6 +246,7 @@ body {
 .filter-button:hover {
    background-color: var(--accent-color);
    color: #fff;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* -------------------------------------------PROJECTS LIST PORTFOLIO PAGE----------------------------------------------------------*/
@@ -279,27 +280,28 @@ body {
 
 .portfolio-link{
     text-decoration: none;
-    display:block;
+    display:block;    
+}
+
+.portfolio-section{ 
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 24px; 
-    padding-right: 24px;
-    border-bottom: 1px solid #eee;
-    border-right: 1px solid #eee;
-    border-left:1px solid #eee;
-     
+    padding-left: 24px;
+    padding-right: 24px;   
+    background: #FFF;
+    border: 1px solid #EEE;
 }
+
 .portfolio-link:hover{
-    border: 1px solid #eee;
-        box-shadow: 0px 1px 1px 
-        rgba(0, 0, 0, 0.12), 0px 4px 4px
-        rgba(0, 0, 0, 0.06), 1px 4px 6px 
-        rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 1px 
+    rgba(0, 0, 0, 0.12), 0px 4px 4px
+    rgba(0, 0, 0, 0.06), 1px 4px 6px 
+    rgba(0, 0, 0, 0.16);
 }
+
 
 .portfolio-list-title{  
     color: var(--title-text-color);
-   
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -356,20 +358,20 @@ body {
     display: flex;
     
 }
-.features-icon{
+
+.features-box{
+    display: flex;
     width: 270px;
     height: 120px;
-    padding: 25px 102px;
-    background: #F5F4FA;
-    border-radius: 4px;
     margin-bottom: 30px;
+    padding: 25px 102px;
+    border-radius: 4px;
+    background: #F5F4FA;
 }
-
-
+ 
 
 .features-list-item{
     margin-bottom: 0;
-    width: 270px;
     margin-right: var(--typical-margin);
      
 }
@@ -424,8 +426,7 @@ body {
 
 .team {
     padding-top: var(--typical-padding);
-    padding-bottom:30px;
-
+    padding-bottom: var(--typical-padding);
     background-color: #F5F4FA;
     text-align: center;
 }
@@ -500,16 +501,18 @@ body {
     margin-right: 10px;
 }
 
+.snw-item:last-child,
 .socialnetwork-list:last-child{
     margin-right: 0;
 }
 
 .snw-link{
-    display: inline-block;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-   padding: 12px 12px;
+   display: flex;
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+   justify-content: center ;
+   align-items: center;
    color: #afb1b8;
 }
 
@@ -517,34 +520,7 @@ body {
     fill: currentColor;
    
 }
-/*
-.snw-link.instagram{
-    padding-top: 12px;
-    padding-right: 12px;
-    padding-bottom: 12px;
-    padding-left: 12px;
-}
-.snw-link.twitter {
-    padding-top: 13.88px;
-    padding-right: 12px;
-    padding-bottom: 12px;
-    padding-left: 13.88px;
-}
 
-.snw-link.facebook {
-    padding-top: 0;
-    padding-right: 16.84px;
-    padding-bottom: 0px;
-    padding-left: 17.16px;
-}
-
-.snw-link.twitter {
-    padding-top: 12px;
-    padding-right: 12px;
-    padding-bottom: 12px;
-    padding-left: 12px;
-}
-*/
 
 .snw-link:hover{
     color:#fff;
@@ -557,6 +533,7 @@ body {
  .clients{
      padding-top: var(--typical-padding);
      padding-top: var(--typical-padding);
+     padding-bottom: var(--typical-padding);
  }
 
  .clients-title{
@@ -573,24 +550,27 @@ body {
 .clients-list{
     display: flex;
     flex-direction: row;   
-     padding-bottom: var(--typical-padding);
+     
 }
 
-.client-link{
-    margin-right: var(--typical-margin)
+.client-item{
+    margin-right: var(--typical-margin);
 }
 
-.clients-list:last-child{
+.clients-item:last-child{
     margin-right:0;
 }
  
-.icon{
-    
+.client-link{
+    display: flex; 
+    justify-content:center;
     width: 170px;
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    padding: 16px 32px; 
+}
+
+.icon{ 
     fill: #afb1b8;
 }
 
@@ -652,7 +632,7 @@ body {
 .footer-phon:focus
 .footer-address:hover,
 .footer-address:hover{
-     color: var(--accent-color); 
+     color: #FFF; 
     }
 
 /* -------------------------------------------Join us------------------------------------------------------------------------*/
@@ -684,12 +664,13 @@ body {
 }
 
 .join-link{
- display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    padding: 12px 12px;
-     
+    color: #fff;
     background: rgba(255, 255, 255, 0.1);
 }
 .socialnetwork-list {
@@ -701,6 +682,7 @@ body {
     margin-right: 10px;
 }
 
+.join-item:last-child,
 .join-list:last-child {
     margin-right: 0;
 }
@@ -710,7 +692,6 @@ body {
 }
 
 .join-link:hover {
-    color: #fff;
     background-color: var(--accent-color);
 
 }
