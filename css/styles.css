@@ -289,6 +289,7 @@ body {
     padding-left: 24px;
     padding-right: 24px;   
     background: #FFF;
+    border-top: none;
     border: 1px solid #EEE;
 }
 
@@ -364,11 +365,15 @@ body {
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
-    padding: 25px 102px;
+    justify-content: center;
+    align-items: center;
     border-radius: 4px;
     background: #F5F4FA;
 }
- 
+ .features-icon{
+   width: 70px;
+   height: 70px;
+ }
 
 .features-list-item{
     margin-bottom: 0;
@@ -557,14 +562,14 @@ body {
     margin-right: var(--typical-margin);
 }
 
-.clients-item:last-child{
+.client-item:last-child{
     margin-right:0;
 }
  
 .client-link{
     display: flex; 
     justify-content:center;
-     padding: 16px 32px;
+    align-items: center;
     width: 170px;
     height: 92px;
     color: #AFB1B8;
@@ -573,6 +578,8 @@ body {
 }
 
 .icon{ 
+    width: 106px;
+    height: 60px;
     fill:currentColor;
 }
 
